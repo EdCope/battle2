@@ -1,9 +1,17 @@
 <h2><%= @game.player_1.name %> vs <%= @game.player_2.name %></h2>
+<p><%= @game.player_1.name %> <%= @game.player_1.hp %> hit points</p>
 <p><%= @game.player_2.name %> <%= @game.player_2.hp %> hit points</p>
 
 <form action="/attack">
 <input type="submit" value= "Attack">
 </form>
+
+<p><% if @game.attacked_first == @game.player_2 %> 
+<%= @game.player_1.name %>'s go
+<% else %> 
+<%= @game.player_2.name %>'s go
+<% end %>
+</p>
 
 
 

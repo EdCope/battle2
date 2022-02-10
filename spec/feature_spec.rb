@@ -34,4 +34,13 @@ feature "attack" do
 
 end
 
+feature "next_turn" do
+  scenario "switching from player_1 to player_2" do
+    sign_in_and_play
+    click_button 'Attack'
+    click_button 'Next Turn'
+    expect(page).to have_content "Ed's go"
+  end
+end
+
 

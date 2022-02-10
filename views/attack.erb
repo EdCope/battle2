@@ -1,2 +1,14 @@
+
+<% if @game.attacked_first == @game.player_1 %> 
 <h3><%= @game.player_1.name %> attacked <%= @game.player_2.name%></h3>
+<% else %> 
+<h3><%= @game.player_2.name %> attacked <%= @game.player_1.name%></h3>
+<% end %>
+
+
+<p><%= @game.player_1.name %>'s HP: <%= @game.player_1.hp %></p>
 <p><%= @game.player_2.name %>'s HP: <%= @game.player_2.hp %></p>
+
+<form action="/play">
+<input type="submit" value="Next Turn">
+</form>

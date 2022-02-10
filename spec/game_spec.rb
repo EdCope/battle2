@@ -15,4 +15,14 @@ describe Game do
     game.attack(player_2)
   end
 
+  it "should have turns" do
+    expect(game.attacked_first).to eq player_2
+  end
+
+  it "should swap players turn" do
+    expect(player_2).to receive(:damage_taken)
+    game.attack(player_2)
+    expect(game.attacked_first).to eq player_2
+  end
+
 end
