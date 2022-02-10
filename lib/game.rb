@@ -1,9 +1,9 @@
 class Game
-  attr_reader :player1, :player2
+  attr_reader :player_1, :player_2
 
   def initialize(p1 = nil, p2 = nil)
-    @player1 = p1
-    @player2 = p2
+    @player_1 = p1
+    @player_2 = p2
   end
 
   def attack(player_receving_damage)
