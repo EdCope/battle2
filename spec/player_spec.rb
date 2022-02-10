@@ -11,7 +11,7 @@ describe Player do
   end
 
   it "should change hit points by 10" do
-    expect{player.damage_taken(10)}.to change{player.hp}.by(-10)
+    expect{player.damage_taken}.to change{player.hp}.by(-10)
   end
 
 end

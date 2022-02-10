@@ -6,11 +6,9 @@ class Player
     @name = name
     @hp = 60
   end
-
-  public 
   
-  def damage_taken(damage)
-    @hp -= damage
+  def damage_taken
+    @hp -= 10
   end
 
 end
